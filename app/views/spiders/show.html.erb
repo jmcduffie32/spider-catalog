@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Species:</strong>
+  <%= @spider.species %>
+</p>
+
+<p>
+  <strong>Venemous:</strong>
+  <%= @spider.venemous %>
+</p>
+
+<p>
+  <strong>Spider:</strong>
+  <%= @spider.spider_id %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @spider.description %>
+</p>
+
+<%= link_to 'Edit', edit_spider_path(@spider) %> |
+<%= link_to 'Back', spiders_path %>

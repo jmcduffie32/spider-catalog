@@ -1,0 +1,33 @@
+<%= form_for(@spider) do |f| %>
+  <% if @spider.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@spider.errors.count, "error") %> prohibited this spider from being saved:</h2>
+
+      <ul>
+      <% @spider.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :species %><br>
+    <%= f.text_field :species %>
+  </div>
+  <div class="field">
+    <%= f.label :venemous %><br>
+    <%= f.check_box :venemous %>
+  </div>
+  <div class="field">
+    <%= f.label :spider_id %><br>
+    <%= f.number_field :spider_id %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

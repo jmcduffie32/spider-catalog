@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  species: MyString
+  venemous: false
+  spider_id: 1
+  description: MyText
+
+two:
+  species: MyString
+  venemous: false
+  spider_id: 1
+  description: MyText
