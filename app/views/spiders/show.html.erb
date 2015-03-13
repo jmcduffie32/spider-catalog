@@ -4,16 +4,13 @@
   <strong>Species:</strong>
   <%= @spider.species %>
 </p>
+<%= image_tag @spider.picture.url if @spider.picture? %>
 
 <p>
   <strong>Venemous:</strong>
   <%= @spider.venemous %>
 </p>
 
-<p>
-  <strong>Spider:</strong>
-  <%= @spider.spider_id %>
-</p>
 
 <p>
   <strong>Description:</strong>

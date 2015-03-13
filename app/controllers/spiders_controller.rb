@@ -69,6 +69,6 @@ class SpidersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def spider_params
-      params.require(:spider).permit(:species, :venemous, :spider_id, :description)
+      params.require(:spider).permit(:species, :venemous, :spider_id, :description, :picture)
     end
 end
