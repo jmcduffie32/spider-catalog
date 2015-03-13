@@ -35,7 +35,7 @@ gem 'carrierwave'
 gem 'fog'
 gem 'mini_magick'
 group :production do
-	gem 'postgres'
+	gem 'pg'
 end
 
 group :development, :test do
