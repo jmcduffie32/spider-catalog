@@ -1,10 +1,10 @@
+
+<div class="container">
 <p id="notice"><%= notice %></p>
 
 <h1>Spiders</h1>
-<div class="container">
 
-
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Species</th>
@@ -21,10 +21,10 @@
         <td><%= spider.species %></td>
         <td><%= spider.venemous %></td>
         <td><%= spider.description %></td>
-        <td><%= link_to (image_tag spider.picture.url),spider if spider.picture %></td>
-        <td><%= link_to 'Show', spider %></td>
-        <td><%= link_to 'Edit', edit_spider_path(spider) %></td>
-        <td><%= link_to 'Destroy', spider, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= image_tag spider.picture.url if spider.picture %></td>
+        <td><%= link_to 'Show', spider, :class => "btn btn-default" %></td>
+        <td><%= link_to 'Edit', edit_spider_path(spider), :class => "btn btn-default" %></td>
+        <td><%= link_to 'Delete', spider, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-default" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,5 +32,5 @@
 
 <br>
 
-<%= link_to 'New Spider', new_spider_path %>
+<%= link_to 'New Spider', new_spider_path, :class => "btn btn-default" %>
 </div>
