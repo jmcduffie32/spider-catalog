@@ -1,7 +1,11 @@
 
 
 <p id="notice"><%= notice %></p>
-
+<p><% if session[:user_id] %>
+    <%= button_to 'Log Out', login_url, method: :delete %>
+  <% else %>
+    <%= button_to 'Login', login_url, method: :create %>
+  <% end %>
 <h1>Spiders</h1>
 
 <table class="table">
@@ -23,13 +27,16 @@
         <td><%= spider.description %></td>
         <td><%= image_tag spider.picture.url if spider.picture %></td>
         <td><%= link_to 'Show', spider, :class => "btn btn-default" %></td>
+        <% if session[:user_id] %>
         <td><%= link_to 'Edit', edit_spider_path(spider), :class => "btn btn-default" %></td>
         <td><%= link_to 'Delete', spider, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-default" %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
+<% if session[:user_id] %>
 <%= link_to 'New Spider', new_spider_path, :class => "btn btn-default" %>
+<% end %>
