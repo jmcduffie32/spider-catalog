@@ -25,7 +25,7 @@
         <td><%= spider.species %></td>
         <td><%= spider.venemous %></td>
         <td><%= spider.description %></td>
-        <td><%= image_tag spider.picture.url if spider.picture %></td>
+        <td><%= image_tag spider.picture, width: "50" if spider.picture %></td>
         <td><%= link_to 'Show', spider, :class => "btn btn-default" %></td>
         <% if session[:user_id] %>
         <td><%= link_to 'Edit', edit_spider_path(spider), :class => "btn btn-default" %></td>

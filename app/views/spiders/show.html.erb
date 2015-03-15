@@ -4,7 +4,7 @@
   <strong>Species:</strong>
   <%= @spider.species %>
 </p>
-<%= image_tag @spider.picture.url if @spider.picture? %>
+<%= image_tag @spider.picture, width: "300" if @spider.picture? %>
 
 <p>
   <strong>Venemous:</strong>

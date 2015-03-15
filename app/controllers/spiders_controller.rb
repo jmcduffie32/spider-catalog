@@ -1,6 +1,6 @@
 class SpidersController < ApplicationController
   before_action :set_spider, only: [:show, :edit, :update, :destroy]
-
+  skip_before_action :authorize, only: [:index, :show]
   # GET /spiders
   # GET /spiders.json
   def index
